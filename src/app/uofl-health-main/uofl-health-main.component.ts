@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'uofl-health-main.component.html',
   styleUrls: ['uofl-health-main.component.css']
 })
-export class ContactFieldComponent implements OnInit {
+export class UoflHealthMainComponent implements OnInit {
 
   constructor() { }
 

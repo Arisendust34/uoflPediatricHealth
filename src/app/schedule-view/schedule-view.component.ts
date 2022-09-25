@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'schedule-view.component.html',
   styleUrls: ['schedule-view.component.css']
 })
-export class ContactFieldComponent implements OnInit {
+export class ScheduleViewComponent implements OnInit {
 
   constructor() { }
 

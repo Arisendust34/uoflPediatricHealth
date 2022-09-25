@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'employee-list.component.html',
   styleUrls: ['employee-list.component.css']
 })
-export class ContactFieldComponent implements OnInit {
+export class EmployeeListComponent implements OnInit {
 
   constructor() { }
 

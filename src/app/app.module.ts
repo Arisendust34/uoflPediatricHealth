@@ -1,14 +1,33 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import{EmployeeListComponent} from './employee-list/employee-list.component';
+import{EndOfShiftComponent} from './end-of-shift-survey/end-of-shift-survey.component';
+import{ScheduleViewComponent} from './schedule-view/schedule-view.component';
+import{UoflHealthMainComponent} from './uofl-health-main/uofl-health-main.component';
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 import { AppComponent } from './app.component';
+import { environment } from './environments/environment';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmployeeListComponent,
+    EndOfShiftComponent,
+    ScheduleViewComponent,
+    UoflHealthMainComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebaeConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule, 
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

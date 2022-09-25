@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'end-of-shift-survey.component.html',
   styleUrls: ['end-of-shift-survey.component.css']
 })
-export class ContactFieldComponent implements OnInit {
+export class EndOfShiftComponent implements OnInit {
 
   constructor() { }
 
