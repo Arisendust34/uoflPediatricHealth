@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {ContactFieldComponent} from './end-of-shift-survey.component';
+import {EndOfShiftComponent} from './end-of-shift-survey.component';
 
 describe('HomePageComponent', () => {
-  let component:ContactFieldComponent;
-  let fixture: ComponentFixture<ContactFieldComponent>;
+  let component:EndOfShiftComponent;
+  let fixture: ComponentFixture<EndOfShiftComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ContactFieldComponent]
+      declarations: [EndOfShiftComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ContactFieldComponent);
+    fixture = TestBed.createComponent(EndOfShiftComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

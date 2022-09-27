@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {ContactFieldComponent} from './schedule-view.component';
+import {ScheduleViewComponent} from './schedule-view.component';
 
 describe('HomePageComponent', () => {
-  let component:ContactFieldComponent;
-  let fixture: ComponentFixture<ContactFieldComponent>;
+  let component:ScheduleViewComponent;
+  let fixture: ComponentFixture<ScheduleViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ContactFieldComponent]
+      declarations: [ScheduleViewComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ContactFieldComponent);
+    fixture = TestBed.createComponent(ScheduleViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {ContactFieldComponent} from './uofl-health-main.component';
+import {UoflHealthMainComponent} from './uofl-health-main.component';
 
 describe('HomePageComponent', () => {
-  let component:ContactFieldComponent;
-  let fixture: ComponentFixture<ContactFieldComponent>;
+  let component:UoflHealthMainComponent;
+  let fixture: ComponentFixture<UoflHealthMainComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ContactFieldComponent]
+      declarations: [UoflHealthMainComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ContactFieldComponent);
+    fixture = TestBed.createComponent(UoflHealthMainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
