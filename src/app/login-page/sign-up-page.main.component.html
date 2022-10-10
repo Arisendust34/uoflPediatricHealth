@@ -32,11 +32,11 @@
           </div> -->
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="text" minlength="6"  maxlength="12" placeholder="Enter your password" id="password1" required>
+            <input type="text" minlength="6"  maxlength="12" placeholder="Enter your password" id="password1" onchange="onChange()" required>
           </div>
-          <div class="input-box">
+          <div class="input-box" id="message2">
             <span class="details">Confirm Password</span>
-            <input type="text" minlength="6"  maxlength="12" placeholder="Confirm your password" id="password2" required>
+            <input type="text" minlength="6"  maxlength="12" placeholder="Confirm your password" id="password2" onchange="onChange()" required>
           </div>
         </div>
         <div class="gender-details">
@@ -65,6 +65,6 @@
       </form>
     </div>
   </div>
-  <script src="login-page-main.component.ts"> </script>
+  <script src="password-validation-main.component.js"> </script>
 </body>
 </html>
