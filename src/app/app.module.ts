@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 import{EmployeeListComponent} from './employee-list/employee-list.component';
 import{EndOfShiftComponent} from './end-of-shift-survey/end-of-shift-survey.component';
 import{ScheduleViewComponent} from './schedule-view/schedule-view.component';
@@ -27,6 +28,7 @@ import { environment } from './environments/environment';
   imports: [
     BrowserModule,
     RouterModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaeConfig),
     AngularFirestoreModule,
     AngularFireAuthModule, 
