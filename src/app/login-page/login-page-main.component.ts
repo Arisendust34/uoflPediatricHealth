@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-schedule-view',
+  selector: 'app-login-page',
   templateUrl: 'login-page-main.component.html',
   styleUrls: ['login-page-main.component.css']
 })
