@@ -46,6 +46,13 @@ export class LoginPageComponent implements OnInit {
     this.router.navigate(['/app-login-page']); //references app-routing.module.ts for resolving the navigation
     this.showMainLogin(); //since the URL is the same, angular won't actually refresh page
   }
+  //after clicking "Submit" on the email reset request view
+  clickSubmitResetPW() {
+    //TODO: logic for emaililng out password reset links
+    if(!(<HTMLInputElement>document.getElementById('emailResetField')).checkValidity() ) return;
+    this.router.navigate(['/app-login-page']);
+    this.showMainLogin(); 
+  }
 
   onPassChange() {
     const password = <HTMLInputElement>document.getElementById('password1'); //cast

@@ -35,10 +35,10 @@
               <form action="login-page-main.component.html">
                 <div class="row">
                   <i class="fas fa-user"></i>
-                  <input type="email" placeholder="Account Email" required>
+                  <input type="email" placeholder="Account Email" id="emailResetField" required>
                 </div>
                 <div class="row button">
-                   <input type="submit" value="Reset Password">
+                   <input type="submit" value="Reset Password" (click)="clickSubmitResetPW()">
                 </div>
               </form>
             </div>
