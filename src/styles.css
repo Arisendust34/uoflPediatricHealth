@@ -5,3 +5,7 @@ body {
     margin: 0;
     padding: 0;
 }
+/*background color; needed after having hidden elements (via *ngIf)*/
+html{
+    background: #1abc9c; 
+  }

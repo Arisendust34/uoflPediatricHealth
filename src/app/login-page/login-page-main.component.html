@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     </head>
     <body> 
-        <div class="container">
+        <div class="container login-main" *ngIf="showLoginMain">
             <div class="wrapper">
               <div class="title"><span>UEval Login</span></div>
               <form action="../uofl-health-main/uofl-health-main.component.html">
@@ -21,14 +21,84 @@
                   <i class="fas fa-lock"></i>
                   <input type="password" placeholder="Password" minlength="6"  maxlength="12" required>
                 </div>
-                <div class="pass"><a href="forgot-password-main.component.html">Forgot password?</a></div>
+                <div class="pass"><a (click)="clickForgotPassword()">Forgot password?</a></div>
                 <div class="row button">
                    <input type="submit" value="Login">
                 </div>
-                <div class="signup-link">Not a member? <a href="sign-up-page.main.component.html">Signup now</a></div>
+                <div class="signup-link">Not a member? <a (click)="clickSignUp()">Signup now</a></div>
               </form>
             </div>
           </div>
+          <div class="container" id="login-resetpw" *ngIf="showResetPW">
+            <div class="wrapper">
+              <div class="title"><span>UEval Reset Password</span></div>
+              <form action="login-page-main.component.html">
+                <div class="row">
+                  <i class="fas fa-user"></i>
+                  <input type="email" placeholder="Account Email" required>
+                </div>
+                <div class="row button">
+                   <input type="submit" value="Reset Password">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="container" id="login-register" *ngIf="showRegister">
+            <div class="title">UEval Registration</div>
+              <div class="content">
+                <form action="login-page-main.component.html" id="registerForm">
+                  <div class="user-details">
+                    <div class="input-box">
+                      <span class="details">Full Name</span>
+                      <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Email</span>
+                      <input type="email" placeholder="Enter your Email" required>
+                    </div>
+                    <!-- <div class="input-box">
+                      <span class="details">Email</span>
+                      <input type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Phone Number</span>
+                      <input type="text" placeholder="Enter your number" required>
+                    </div> -->
+                    <div class="input-box">
+                      <span class="details">Password</span>
+                      <input type="password" minlength="6"  maxlength="12" placeholder="Enter your password" id="password1" (change)="onPassChange()" required>
+                    </div>
+                    <div class="input-box" id="message2">
+                      <span class="details">Confirm Password</span>
+                      <input type="password" minlength="6"  maxlength="12" placeholder="Confirm your password" id="password2" (change)="onPassChange()" required>
+                    </div>
+                  </div>
+                  <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    <span class="gender-title">Hospital</span>
+                    <div class="category">
+                      <label for="dot-1">
+                      <span class="dot one"></span>
+                      <span class="gender">UOFL Health</span>
+                    </label>
+                    <label for="dot-2">
+                      <span class="dot two"></span>
+                      <span class="gender">Norton</span>
+                    </label>
+                    <label for="dot-3">
+                      <span class="dot three"></span>
+                      <span class="gender">Both</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="button">
+                    <input type="submit" value="Register" (click)="clickSubmitRegister()">
+                  </div>
+                </form>
+              </div>
+            </div>
         <script src="login-page-main.component.ts"> </script>
     </body>
     </html>
