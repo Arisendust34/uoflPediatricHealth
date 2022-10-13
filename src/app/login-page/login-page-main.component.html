@@ -15,15 +15,15 @@
               <form action="../uofl-health-main/uofl-health-main.component.html">
                 <div class="row">
                   <i class="fas fa-user"></i>
-                  <input type="email" placeholder="Email" required>
+                  <input type="email" placeholder="Email" id="userEmailField" required>
                 </div>
                 <div class="row">
                   <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="Password" minlength="6"  maxlength="12" required>
+                  <input type="password" placeholder="Password" minlength="6"  maxlength="12" id="userPWField" required>
                 </div>
                 <div class="pass"><a (click)="clickForgotPassword()">Forgot password?</a></div>
                 <div class="row button">
-                   <input type="submit" value="Login">
+                   <input type="submit" value="Login" (click)="clickLogin()">
                 </div>
                 <div class="signup-link">Not a member? <a (click)="clickSignUp()">Signup now</a></div>
               </form>

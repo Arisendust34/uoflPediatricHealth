@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router'; 
 
 //declare function onChange(): void; //links to js file
 
@@ -53,6 +53,13 @@ export class LoginPageComponent implements OnInit {
     this.router.navigate(['/app-login-page']);
     this.showMainLogin(); 
   }
+  //after clicking "Login" on main view
+  clickLogin() {
+    //TODO: validating email and password
+    if(!(<HTMLInputElement>document.getElementById('userEmailField')).checkValidity() ) return;
+    if(!(<HTMLInputElement>document.getElementById('userPWField')).checkValidity() ) return;
+    this.router.navigate(['app-uofl-health-main']);
+  }
 
   onPassChange() {
     const password = <HTMLInputElement>document.getElementById('password1'); //cast
@@ -64,7 +71,7 @@ export class LoginPageComponent implements OnInit {
     }
   }
 
-  constructor(private router: Router) { //import router for this.router
+  constructor(private router: Router, private route: ActivatedRoute) { //import router for this.router
     
   }
 
