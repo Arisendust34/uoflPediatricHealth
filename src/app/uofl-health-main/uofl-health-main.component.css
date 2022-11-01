@@ -102,7 +102,7 @@ section {
 
 @supports (background-blend-mode: multiply) {
   .hero {
-    background: url(../img/shoe-3.png), radial-gradient(#000, #000);
+    /* background: url(../img/shoe-3.png), radial-gradient(#000, #000); */
     background-blend-mode: multiply;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -196,13 +196,13 @@ section {
   .product__image {
     float: right;
     width: 65%;
-    shape-outside: url(../img/shoe-1.png);
+    /* shape-outside: url(../img/shoe-1.png); */
     shape-margin: 1em;
     margin: 0 -5em 0 0;
   }
   .product.shoe-left .product__image {
     float: left;
-    shape-outside: url(../img/shoe-2.png);
+    /* shape-outside: url(../img/shoe-2.png); */
     margin: 0 0 0 -5em;
     shape-margin: 2em;
   }
