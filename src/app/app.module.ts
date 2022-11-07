@@ -15,6 +15,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 import { AppComponent } from './app.component';
 import { environment } from './environments/environment';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { environment } from './environments/environment';
     AngularFireAuthModule, 
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
   ],
   providers: [],
   bootstrap: [AppComponent]
