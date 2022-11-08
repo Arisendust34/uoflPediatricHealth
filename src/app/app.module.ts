@@ -22,6 +22,7 @@ import { CalendarComponent } from './schedule-view/calendar/calendar.component';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { FlatpickrModule } from 'angularx-flatpickr';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -42,12 +43,15 @@ import { FlatpickrModule } from 'angularx-flatpickr';
     AngularFireAuthModule, 
     AngularFireStorageModule,
     AngularFireDatabaseModule,
-    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     NgbModule,
+    CommonModule,
     FormsModule,
+    NgbModalModule,
     FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [CalendarComponent]
 })
 export class AppModule { }
