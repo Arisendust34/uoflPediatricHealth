@@ -15,11 +15,13 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 import { AppComponent } from './app.component';
 import { environment } from './environments/environment';
-import { CalendarModule, DateAdapter } from 'angular-calendar';
 //ng-calendar stuff:
+import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { CalendarComponent } from './schedule-view/calendar/calendar.component';
-import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { FlatpickrModule } from 'angularx-flatpickr';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,9 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
+    NgbModule,
+    FormsModule,
+    FlatpickrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

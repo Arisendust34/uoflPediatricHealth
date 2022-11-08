@@ -128,20 +128,20 @@
           <td>
             <input
               type="color"
-              [(ngModel)]="event.color.primary"
+              [(ngModel)]="event.color!.primary"
               (change)="refresh.next()"
             />
           </td>
           <td>
             <input
               type="color"
-              [(ngModel)]="event.color.secondary"
+              [(ngModel)]="event.color!.secondary"
               (change)="refresh.next()"
             />
             <input
               type="color"
-              [ngModel]="event.color.secondaryText ?? '#1e90ff'"
-              (ngModelChange)="event.color.secondaryText = $event"
+              [ngModel]="event.color!.secondaryText ?? '#1e90ff'"
+              (ngModelChange)="event.color!.secondaryText = $event"
               (change)="refresh.next()"
             />
           </td>
