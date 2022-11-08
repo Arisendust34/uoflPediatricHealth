@@ -5,3 +5,14 @@
     font-family: 'Kumbh Sans', sans-serif;
     scroll-behavior: smooth;
   }
+
+body{
+    background: #1abc9c;
+    overflow: hidden;
+  }
+#calendarSection{
+    margin: 5%;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 10px;
+}
