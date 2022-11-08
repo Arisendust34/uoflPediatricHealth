@@ -16,7 +16,10 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AppComponent } from './app.component';
 import { environment } from './environments/environment';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
+//ng-calendar stuff:
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { CalendarComponent } from './schedule-view/calendar/calendar.component';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     EndOfShiftComponent,
     ScheduleViewComponent,
     UoflHealthMainComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
