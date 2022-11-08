@@ -12,3 +12,4 @@ export class ScheduleViewComponent implements OnInit {
   ngOnInit(): void {
   }
 }
+

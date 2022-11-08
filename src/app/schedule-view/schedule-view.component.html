@@ -6,8 +6,92 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>UEval</title>
         <link rel="stylesheet" href="schedule-view.component.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     </head>
     <body> 
-        <script src="schedule-view.component.ts"> </script>
+        <h1 class="text-center"><b>Work Schedule</b></h1>
+        <!-- Table Data -->
+        <div class="container">
+            <hr>
+            <input type="text" id="myInput" onkeyup='tableSearch()' placeholder="Name">
+    
+            <table class="table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+                <tr>
+                    <th></th>
+                    <th>10/6/2022</th>
+                    <th>10/7/2022</th>
+                    <th>10/8/2022</th>
+                </tr>
+                <tr>
+                    <td>NCH 7a</td>
+                    <td style="background-color: yellow;">Caperell K</td>
+                    <td style="background-color: yellow;">Klensch J</td>
+                    <td style="background-color: yellow;">Hart R</td>
+                </tr>
+                <tr>
+                    <td>NCH 8a</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>NCH 9a</td>
+                    <td style="background-color: yellow;">Lund R</td>
+                    <td style="background-color: yellow;">Spurlin B</td>
+                    <td style="background-color: yellow;">Eastep K</td>
+                </tr>
+                <tr>
+                    <td>NCH 11a</td>
+                    <td></td>
+                    <td style="background-color: orange;">Magloire V</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>NCH 3p</td>
+                    <td style="background-color: red;">Starr R</td>
+                    <td style="background-color: red;">Patterson A</td>
+                    <td style="background-color: red;">Hanson A</td>
+                </tr>
+                <tr>
+                    <td>NCH 4p</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>NCH 5p</td>
+                    <td style="background-color: purple;">Eastep K</td>
+                    <td style="background-color: purple;">Poteh A</td>
+                    <td style="background-color: purple;">Caperell K</td>
+                </tr>
+                <tr>
+                    <td>NCH 7p</td>
+                    <td  style="background-color: purple;">Hart R</td>
+                    <td  style="background-color: purple;">Lund R</td>
+                    <td  style="background-color: purple;">Lund R</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td  style="background-color: purple;">Bhargava A</td>
+                </tr>
+                <tr>
+                    <td>NCH 8p</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>NCH 11p</td>
+                    <td style="background-color: purple;">Laniewicz M</td>
+                    <td style="background-color: purple;">Anderson B</td>
+                    <td style="background-color: purple;">Anderson B</td>
+                </tr>
+            </table>
+        </div>
+    
+        <script src="schedule-view.component.js"> </script>
     </body>
     </html>

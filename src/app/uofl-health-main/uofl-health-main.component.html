@@ -20,11 +20,36 @@
                 <div class="container">
                   <h2 class="section-title">Upload Your Schedule</h2>
           
-                  <article class="product shoe-red spacing">
-                    <img src="img/shoe-1.png" alt="" class="product__image">
+                  <article class="product shoe-red spacing">      
                     <h3 class="product__title">Hostiptal Upload</h3>
-                    <p class="product__description">Description</p>
-                    <a href="" class="btn">Upload</a>
+                    <p class="product__description"></p>
+                    <button id="myBtn" class="btn">Upload</button>
+                    
+                    <div id="myModal" class="modal">
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="upload-box">
+                          <div>
+                          <p style="color:white; font-size: 25px; text-align: center;"><b>Upload Files</b></p><br>
+                        </div>
+                        <p style="color: white; font-size:25px;">Select tabs to upload.</p><br>
+                        <label>
+                          <input type="checkbox" class="radio"name="hospital[1][]" value="1" />
+                        </label>
+                          <span style="width:300px;display:inline-block; ">UOFL Health Schedule</span>
+                        <label>
+                          <input type="checkbox"class="radio"name="hospital[1][]" value="1" />
+                        </label>
+                          <span style="width:300px;display:inline-block;">Norton Health Schedule</span>
+                      </div><br>
+                      <form action="" class="xcel">
+                        <label for="filename" name="filename"></label>   
+                        <input type="file" id="myFile" name="filename" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><br><br>
+                        <button class="submit_box" id="uploadconfirm">Upload File</button>
+                      </form>
+                    </div>
+                    </div>
+                    <!-- <a href="../upload/upload.main.component.html" class="btn">Upload</a> -->
                   </article>
                 </div>
               </section>
@@ -34,16 +59,15 @@
                 <h2 class="section-title">Employee List</h2>
         
                 <article class="product shoe-red spacing">
-                  <img src="img/shoe-1.png" alt="" class="product__image">
+          
                   <h3 class="product__title">UOFL HEALTH</h3>
-                  <p class="product__description">Description</p>
-                  <a href="" class="btn">Uofl Employees</a>
+                  <p class="product__description"></p>
+                  <a href="../employee-list/employee-list.component.html" class="btn">Uofl Employees</a>
                 </article>
                 <article class="product shoe-red spacing">
-                    <img src="img/shoe-1.png" alt="" class="product__image">
                     <h3 class="product__title">NORTON PEDIATRIC</h3>
-                    <p class="product__description">Description</p>
-                    <a href="" class="btn">Norton Employees</a>
+                    <p class="product__description"></p>
+                    <a href="../employee-list/employee-list.component.html" class="btn">Norton Employees</a>
                   </article>
               
               </div>
@@ -54,24 +78,21 @@
               <div class="container">
                 <h2 class="section-title">Schedule & Surveys</h2>
         
-                <article class="product shoe-red spacing">
-                  <img src="img/shoe-1.png" alt="" class="product__image">
+                <article class="product shoe-red spacing">      
                   <h3 class="product__title">UOFL HEALTH</h3>
-                  <p class="product__description">Description!</p>
+                  <p class="product__description"></p>
                   <a href="" class="btn">Uofl Health Schedule</a>
                 </article>
         
                 <article class="product shoe-white shoe-left spacing">
-                  <img src="img/shoe-2.png" alt="" class="product__image">
                   <h3 class="product__title">NORTON PEDIATRIC</h3>
-                  <p class="product__description">Description</p>
+                  <p class="product__description"></p>
                   <a href="" class="btn">Norton Schedule</a>
                 </article>
         
                 <article class="product shoe-blue spacing">
-                  <img src="img/shoe-3.png" alt="" class="product__image">
                   <h3 class="product__title">SURVEYS</h3>
-                  <p class="product__description">Description!</p>
+                  <p class="product__description"></p>
                   <a href="" class="btn">Surveys</a>
                 </article>
         
@@ -79,7 +100,7 @@
             </section>
         
           </main>
-        <script src="uofl-health-main.component.ts"> </script>
+        <script src="uofl-health-main.compontent.js"> </script>
         <!-- TODO: take in login info from login-page-main.component; validate it-->
 
         <!-- <p> Testing. Random number here: {{rando}}</p> -->
