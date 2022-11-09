@@ -1,31 +1,45 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
-    scroll-behavior: smooth;
-  }
-  .container {
-    padding: 5px;
-    /*height: 100vh;*/ /*commented out, was messing with calendar below the table*/
-  }
-  .grid-item {
-    background-color: lightsalmon;
-    border-radius: 5px;
-    padding: 10px;
-    height: 100px;
-  }
-  
-body{
-    background: #1abc9c;
-    overflow: hidden;
-  }
-#calendarSection{
-    margin: 2% 2% 4% 2%; /*top right bottom left*/
-    padding: 10px;
-    background: #f8f8f8;
-    border-radius: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  scroll-behavior: smooth;
 }
-#calendarTitle{
+.container {
   padding: 5px 0px 40px 0px;
+  margin: auto;
+  /*height: 100vh; Commented out, was messing with calendar below the table*/
+}
+.container td {
+  /*background-color: lightsalmon;*/
+  padding: 10px;
+  height: 50px;
+}
+.container tr {
+  border-bottom: 1pt solid #ddd;
+}
+.container th {
+  border-top: 1pt solid #ddd;
+  padding: 10px;
+  height: 50px;
+}
+
+body {
+  background: #1abc9c;
+  overflow: hidden;
+}
+
+#calendarSection {
+  margin: 1% 8% 4% 8%; /*top right bottom left*/
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1000px) { /*Allow more width for thinner screens*/
+	#calendarSection {
+		margin: 1% 0% 4% 0%
+	}
+}
+#calendarTitle {
+  padding: 40px 0px 5px 0px;
 }

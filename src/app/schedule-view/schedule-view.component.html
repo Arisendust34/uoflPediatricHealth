@@ -4,9 +4,8 @@
         <meta charset="UTF-8">
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>UEval</title>
+        <title>Schedules - UEval</title>
         <link rel="stylesheet" href="schedule-view.component.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     </head>
     <body> 
@@ -14,8 +13,7 @@
             <h1 class="text-center"><b>Work Schedule</b></h1>
             <!-- Table Data -->
             <div class="container">
-                <hr>
-                <input type="text" id="myInput" onkeyup='tableSearch()' placeholder="Name">
+                <input type="text" id="myInput" onkeyup='tableSearch()' placeholder="Search for a name...">
         
                 <table class="table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
                     <tr>
@@ -93,10 +91,14 @@
                 </table>
             </div>
         </div>
+
+        <hr class="border">
+
+        <h1 class="text-center" id="calendarTitle"><b>Calendar</b></h1>
+
         <script src="schedule-view.component.js"> </script>
         <!--The calendar, (see "calendar folder"):-->
         <div id="calendarSection">
-            <h1 class="text-center" id="calendarTitle"><b>Calendar</b></h1>
             <weekCalendarSchedule></weekCalendarSchedule>
         </div>
     </body>
