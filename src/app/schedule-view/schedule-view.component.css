@@ -9,10 +9,20 @@
     padding: 5px;
     height: 100vh;
   }
-  
   .grid-item {
     background-color: lightsalmon;
     border-radius: 5px;
     padding: 10px;
     height: 100px;
   }
+  
+body{
+    background: #1abc9c;
+    overflow: hidden;
+  }
+#calendarSection{
+    margin: 2% 2% 4% 2%; /*top right bottom left*/
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 10px;
+}

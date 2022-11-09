@@ -15,6 +15,15 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 import { AppComponent } from './app.component';
 import { environment } from './environments/environment';
+//ng-calendar stuff:
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { CalendarComponent } from './schedule-view/calendar/calendar.component';
+import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { FlatpickrModule } from 'angularx-flatpickr';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +32,8 @@ import { environment } from './environments/environment';
     EndOfShiftComponent,
     ScheduleViewComponent,
     UoflHealthMainComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +44,16 @@ import { environment } from './environments/environment';
     AngularFireAuthModule, 
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    NgbModule,
+    CommonModule,
+    FormsModule,
+    NgbModalModule,
+    FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [CalendarComponent]
 })
 export class AppModule { }
