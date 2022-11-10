@@ -1,0 +1,32 @@
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Upload a Schedule</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+        <p style="font-size:25px;">Select tabs to upload.</p><br>
+		<form action="" class="xcel">
+			<div class="mb-3">
+				<div class="form-group">
+					<input type="checkbox" id="ulCheckbox" class="radio" name="hospital[1][]" value="1" />
+					<label for="ulCheckbox">UOFL Health Schedule</label>
+				</div>
+				<div class="form-group">
+					<input type="checkbox" id="nortonCheckbox" class="radio" name="hospital[1][]" value="1" />
+					<label for="nortonCheckbox">Norton Health Schedule</label>
+				</div>
+				<label for="scheduleFile">Select a File: </label>
+				<input class="container"
+					type="file"
+					id="scheduleFile"
+					(change)="handleFileInput($any($event.target).files)"> 
+					<!--Typecast to HTMLInputElement impossible; ignore type check instead w/ $any-->
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Upload</button>
+	</div>
+</ng-template>
+
+<button class="btn btn-lg" (click)="open(content)">Upload Schedule</button>
