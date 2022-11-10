@@ -13,7 +13,7 @@
             <h1 class="text-center"><b>Work Schedule</b></h1>
             <!-- Table Data -->
             <div class="container">
-                <input type="text" id="myInput" onkeyup='tableSearch()' placeholder="Search for a name...">
+                <input type="text" id="myInput" (change)='tableSearch()' placeholder="Search for a name...">
         
                 <table class="table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
                     <tr>
