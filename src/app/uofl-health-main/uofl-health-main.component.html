@@ -23,33 +23,7 @@
                   <article class="product shoe-red spacing">      
                     <h3 class="product__title">Hostiptal Upload</h3>
                     <p class="product__description"></p>
-                    <button id="myBtn" class="btn">Upload</button>
-                    
-                    <div id="myModal" class="modal">
-                      <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <div class="upload-box">
-                          <div>
-                          <p style="color:white; font-size: 25px; text-align: center;"><b>Upload Files</b></p><br>
-                        </div>
-                        <p style="color: white; font-size:25px;">Select tabs to upload.</p><br>
-                        <label>
-                          <input type="checkbox" class="radio"name="hospital[1][]" value="1" />
-                        </label>
-                          <span style="width:300px;display:inline-block; ">UOFL Health Schedule</span>
-                        <label>
-                          <input type="checkbox"class="radio"name="hospital[1][]" value="1" />
-                        </label>
-                          <span style="width:300px;display:inline-block;">Norton Health Schedule</span>
-                      </div><br>
-                      <form action="" class="xcel">
-                        <label for="filename" name="filename"></label>   
-                        <input type="file" id="myFile" name="filename" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><br><br>
-                        <button class="submit_box" id="uploadconfirm">Upload File</button>
-                      </form>
-                    </div>
-                    </div>
-                    <!-- <a href="../upload/upload.main.component.html" class="btn">Upload</a> -->
+                    <uploadModal></uploadModal> <!--See upload-modal folder; Uses an ngBootstrap modal.-->
                   </article>
                 </div>
               </section>
@@ -81,13 +55,13 @@
                 <article class="product shoe-red spacing">      
                   <h3 class="product__title">UOFL HEALTH</h3>
                   <p class="product__description"></p>
-                  <a href="" class="btn">Uofl Health Schedule</a>
+                  <a routerLink="/app-schedule-view" class="btn">UofL Health Schedule</a>
                 </article>
         
                 <article class="product shoe-white shoe-left spacing">
                   <h3 class="product__title">NORTON PEDIATRIC</h3>
                   <p class="product__description"></p>
-                  <a href="" class="btn">Norton Schedule</a>
+                  <a routerLink="/app-schedule-view" class="btn">Norton Pediatrics Schedule</a>
                 </article>
         
                 <article class="product shoe-blue spacing">

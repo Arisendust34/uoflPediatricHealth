@@ -37,6 +37,14 @@ const colors: Record<string, EventColor> = {
     primary: '#e3bc08',
     secondary: '#FDF1BA',
   },
+  orange: {
+    primary: '#D1E8FF',
+    secondary: '#ffaa80',
+  },
+  purple: {
+    primary: '#D1E8FF',
+    secondary: '#d699ff',
+  }
 };
 
 @Component({
@@ -90,14 +98,15 @@ export class CalendarComponent {
 
   refresh = new Subject<void>();
 
+  //Default calendar events:
   events: CalendarEvent[] = [
+    /* Yellow block: */
     {
-      start: subDays(startOfDay(new Date()), 1),
-      end: addDays(new Date(), 1),
-      title: 'A 3 day event',
-      color: { ...colors['red'] },
+      start: addHours((new Date(2022, 9, 6)), 7), //year, month-1, day
+      end: addHours((new Date(2022, 9, 6)), 15),
+      title: 'Caparell',
+      color: { ...colors['yellow'] },
       actions: this.actions,
-      allDay: true,
       resizable: {
         beforeStart: true,
         afterEnd: true,
@@ -105,23 +114,231 @@ export class CalendarComponent {
       draggable: true,
     },
     {
-      start: startOfDay(new Date()),
-      title: 'An event with no end date',
+      start: addHours((new Date(2022, 9, 7)), 7),
+      end: addHours((new Date(2022, 9, 7)), 15),
+      title: 'Klensch',
       color: { ...colors['yellow'] },
       actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
     },
     {
-      start: subDays(endOfMonth(new Date()), 3),
-      end: addDays(endOfMonth(new Date()), 3),
-      title: 'A long event that spans 2 months',
-      color: { ...colors['blue'] },
-      allDay: true,
-    },
-    {
-      start: addHours(startOfDay(new Date()), 2),
-      end: addHours(new Date(), 2),
-      title: 'A draggable and resizable event',
+      start: addHours((new Date(2022, 9, 8)), 7),
+      end: addHours((new Date(2022, 9, 8)), 15),
+      title: 'Hart',
       color: { ...colors['yellow'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 6)), 9),
+      end: addHours((new Date(2022,9, 6)), 17),
+      title: 'Lund',
+      color: { ...colors['yellow'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 7)), 9),
+      end: addHours((new Date(2022,9, 7)), 17),
+      title: 'Spurlin',
+      color: { ...colors['yellow'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 8)), 9),
+      end: addHours((new Date(2022,9, 8)), 17),
+      title: 'Eastep',
+      color: { ...colors['yellow'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    /* Orange block: */
+    {
+      start: addHours((new Date(2022, 9, 7)), 11),
+      end: addHours((new Date(2022,9, 7)), 19),
+      title: 'Magloire',
+      color: { ...colors['orange'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    /* Red block: */
+    {
+      start: addHours((new Date(2022, 9, 6)), 15),
+      end: addHours((new Date(2022,9, 6)), 23),
+      title: 'Lund',
+      color: { ...colors['red'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 7)), 15),
+      end: addHours((new Date(2022,9, 7)), 23),
+      title: 'Spurlin',
+      color: { ...colors['red'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 8)), 15),
+      end: addHours((new Date(2022,9, 8)), 23),
+      title: 'Eastep',
+      color: { ...colors['red'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    /* Purple Block (5p): */
+    {
+      start: addHours((new Date(2022, 9, 6)), 17),
+      end: addHours((new Date(2022,9, 6)), 25),
+      title: 'Eastep',
+      color: { ...colors['purple'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 7)), 17),
+      end: addHours((new Date(2022,9, 7)), 25),
+      title: 'Poteh',
+      color: { ...colors['purple'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 8)), 17),
+      end: addHours((new Date(2022,9, 8)), 25),
+      title: 'Caperell',
+      color: { ...colors['purple'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    /* 7p */
+    {
+      start: addHours((new Date(2022, 9, 6)), 19),
+      end: addHours((new Date(2022,9, 6)), 27),
+      title: 'Hart',
+      color: { ...colors['purple'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 7)), 19),
+      end: addHours((new Date(2022,9, 7)), 27),
+      title: 'Lund',
+      color: { ...colors['purple'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 8)), 19),
+      end: addHours((new Date(2022,9, 8)), 27),
+      title: 'Lund',
+      color: { ...colors['purple'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 8)), 19),
+      end: addHours((new Date(2022,9, 8)), 27),
+      title: 'Bhargava',
+      color: { ...colors['purple'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },  
+    /* 9p */
+    {
+      start: addHours((new Date(2022, 9, 6)), 21),
+      end: addHours((new Date(2022,9, 6)), 29),
+      title: 'Laniewicz',
+      color: { ...colors['purple'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 7)), 21),
+      end: addHours((new Date(2022,9, 7)), 29),
+      title: 'Anderson',
+      color: { ...colors['purple'] },
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+    {
+      start: addHours((new Date(2022, 9, 8)), 21),
+      end: addHours((new Date(2022,9, 8)), 29),
+      title: 'Anderson',
+      color: { ...colors['purple'] },
       actions: this.actions,
       resizable: {
         beforeStart: true,

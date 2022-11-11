@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
 import { FlatpickrModule } from 'angularx-flatpickr';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UploadModalComponent } from './uofl-health-main/upload-modal/upload-modal.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ScheduleViewComponent,
     UoflHealthMainComponent,
     LoginPageComponent,
-    CalendarComponent
+    CalendarComponent,
+    UploadModalComponent
   ],
   imports: [
     BrowserModule,
