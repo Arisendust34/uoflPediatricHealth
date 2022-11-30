@@ -25,6 +25,7 @@ import { FlatpickrModule } from 'angularx-flatpickr';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UploadModalComponent } from './uofl-health-main/upload-modal/upload-modal.component';
+import { UnderConstructionModalComponent } from './under-construction-modal/under-construction-modal.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { UploadModalComponent } from './uofl-health-main/upload-modal/upload-mod
     UoflHealthMainComponent,
     LoginPageComponent,
     CalendarComponent,
-    UploadModalComponent
+    UploadModalComponent,
+    UnderConstructionModalComponent
   ],
   imports: [
     BrowserModule,

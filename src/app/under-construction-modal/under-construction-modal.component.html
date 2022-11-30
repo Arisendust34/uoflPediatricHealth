@@ -1,6 +1,9 @@
+<!--This component displays a modal that says "This feature is under construction". For demo purposes.-->
+<!--Only contains the modal itself, this must be called by an HTML button or whatever -->
+<!--For example, using <button myButton (click)=showMyModal()>, where you write showMyModal in the TS-->
 <ng-template #content let-modal>
 	<div class="modal-header">
-		<h4 class="modal-title" id="modal-basic-title">Upload a Schedule</h4>
+		<h4 class="modal-title" id="modal-basic-title">Under Construction!</h4>
 		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
 	</div>
 	<div class="modal-body">
@@ -16,18 +19,11 @@
 					<label for="nortonCheckbox">Norton Health Schedule</label>
 				</div>
 				<label for="scheduleFile">Select a File: </label>
-				<input class="container"
-					type="file"
-					id="scheduleFile"
-					(change)="handleFileInput($any($event.target).files)"> 
-					<!--Typecast to HTMLInputElement impossible; ignore type check instead w/ $any-->
+				
 			</div>
 		</form>
 	</div>
 	<div class="modal-footer">
-		<!--<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Upload</button>-->
-		<button type="button" class="btn btn-outline-dark" (click)="myAlert()">Upload</button>
+		<button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Upload</button>
 	</div>
 </ng-template>
-
-<button class="btn btn-lg" (click)="open(content)">Upload Schedule</button>

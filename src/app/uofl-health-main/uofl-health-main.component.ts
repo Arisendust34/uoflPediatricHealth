@@ -9,14 +9,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class UoflHealthMainComponent implements OnInit {
 
-  rando = Math.random();
-
   ngOnInit(): void {
 
   }
 
   constructor(private router: Router, private route: ActivatedRoute) { 
 
+  }
+
+  myAlert() { 
+    alert("Feature under construction.")
   }
 
 }
