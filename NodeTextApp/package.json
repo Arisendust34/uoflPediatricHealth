@@ -1,0 +1,20 @@
+{
+  "name": "nodetextapp",
+  "version": "1.0.0",
+  "description": "Send SMS from Node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vonage/server-sdk": "^3.0.0",
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "nexmo": "^2.9.1",
+    "save": "^2.9.0",
+    "socket.io": "^4.5.3"
+  }
+}
