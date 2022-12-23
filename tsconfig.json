@@ -22,7 +22,8 @@
       "es2020",
       "dom"
     ],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "skipLibCheck": true, //@angular/fire is currently broken without this
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
